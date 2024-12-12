@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --main-color:#e84242;
+    --black-color:#0e0e0e;
+    border: 0.1 rem solid gainsboro;
+}
+
+#logo {
+    width: 10rem;
+    height: auto;
+}
+#logo:hover {
+    transform: scale(1.5);
+}
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s ease;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+.header {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0 7%;
+    margin: 2rem 7%;
+    border-radius: 30rem;
+    box-shadow: 0px 0px 17px -2px black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+section{
+    padding: 3.5rem 7%;
+}
+body {
+    background-color: rgba(0, 0, 0, 0.907);
+  
+}
+.header .navbar a {
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: var(--black-color);
+    border-bottom: 0.1rem solid transparent;
+
+}
+.header .navbar #active,
+.header .navbar a:hover{
+    border-color: var(--main-color);
+    padding-bottom: 0.5rem;
+}
+.main-screen {
+    min-height: 100vh;
+    background: url(../img/adsız.png)no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: -11rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+
+}
+
+.header .buttons button{
+    background-color: transparent;
+    cursor: pointer ;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+.header .buttons button:hover{
+    transform: scale(1.2);
+    background-color: var(--main-color);
+    border-radius: 0.3rem;
+}
+#menu-btn{
+    display: none;
+}
+.main-screen .content {
+    max-width: 60rem;
+}
+.main-screen .content img {
+    width: 60rem;
+    height: auto;
+    margin-top: 5rem;
+}
+
+.main-screen .clicknow img {
+    margin-left: 30rem;
+}
+@media (max-width:991px) {
+    .main-screen{
+        margin-top: -12rem;
+        justify-content: center;
+
+
+    }
+    .main-screen .content img {
+        width: 60rem;
+       
+     
+    }
+    html{
+        font-size: 55%;
+    }
+    .header {
+        padding: 1.5rem 2rem;
+    }
+    .header #logo {
+        width: 7rem;
+    }
+    section{
+        padding: 2rem;
+    }
+    
+}
+@media (max-width:768px){
+    .main-screen{
+        justify-content: center;
+
+      
+
+    }
+    .main-screen .content img {
+        width: 40rem;
+        margin-top: 3rem;
+       
+     
+    }
+    #menu-btn{
+        display: inline-block;
+    }
+    .header .navbar {
+        position: absolute;
+        top: 95%;
+        background-color: white;
+        height: calc(30vh - 3rem);
+        width: 30rem;
+        box-shadow: 0px 20px 14px 0px black;
+        right: -100%;
+    }
+    .header .navbar a {
+        color: var(--black-color);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+    .header .navbar.active {
+        right: 3rem;
+    }
+} 
+    

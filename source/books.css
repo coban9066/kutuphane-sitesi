@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --main-color:#e84242;
+    --black-color:#0e0e0e;
+    border: 0.1 rem solid gainsboro;
+}
+
+#logo {
+    width: 10rem;
+    height: auto;
+}
+#logo:hover {
+    transform: scale(1.5);
+}
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s ease;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+.header {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0 7%;
+    margin: 2rem 7%;
+    border-radius: 30rem;
+    box-shadow: 0px 0px 17px -2px black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+body {
+    background-color: var(--main-color);
+   
+  
+}
+.header .navbar a {
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: var(--black-color);
+    border-bottom: 0.1rem solid transparent;
+
+}
+.header .navbar #active,
+.header .navbar a:hover{
+    border-color: var(--main-color);
+    padding-bottom: 0.5rem;
+}
+.header .buttons button{
+    background-color: transparent;
+    cursor: pointer ;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+.header .buttons button:hover{
+    transform: scale(1.2);
+    background-color: var(--main-color);
+    border-radius: 0.3rem;
+}
+#menu-btn{
+    display: none;
+}
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    cursor: pointer;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    border-radius: 2rem;
+}
+
+#profile {
+    background-color: transparent;
+    cursor: pointer ;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    display: inline;
+    color: var(--main-color);
+}
+.profile h1 {
+    display: inline;
+    font-size: 1.5rem;
+    color: black;
+}
+.profile a:hover,.profile h1:hover{
+    transform: scale(1.1);
+}
+.main-screen {
+    display: flex;
+    flex-wrap: wrap; /* Kartların satır kaydırmasını sağlar */
+    gap: 2rem; /* Kartlar arasındaki boşluğu ayarlar */
+    justify-content: center; /* Kartları yatayda ortalar */
+    padding: 2rem;
+}
+
+.main-screen form {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 20rem; /* Kart genişliği küçültüldü */
+    padding: 1.5rem; /* İç boşluk azaltıldı */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* İçeriği dikey olarak hizala */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-screen form:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.main-screen h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--black-color);
+}
+
+.main-screen p {
+    margin-bottom: 2rem; /* Butonla arasına mesafe koy */
+    color: var(--black-color);
+    font-size: 1.4rem;
+}
+
+.main-screen button {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Butonu her zaman alta iter */
+}
+
+.main-screen button:hover {
+    background-color: #d13636;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:991px) {
+  
+    html{
+        font-size: 55%;
+    }
+    .header {
+        padding: 1.5rem 2rem;
+    }
+    .header #logo {
+        width: 7rem;
+    }
+    section{
+        padding: 2rem;
+    }
+    
+}
+@media (max-width:768px){
+   
+    #menu-btn{
+        display: inline-block;
+    }
+    .header .navbar {
+        position: absolute;
+        top: 95%;
+        background-color: white;
+        height: calc(30vh - 3rem);
+        width: 30rem;
+        box-shadow: 0px 20px 14px 0px black;
+        right: -100%;
+    }
+    .header .navbar a {
+        color: var(--black-color);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+    .header .navbar.active {
+        right: 3rem;
+    }
+} 
+
